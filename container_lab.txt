@@ -1,0 +1,19 @@
+Lab Repo: 
+Take the provided docker-compose files and we will manipulate these to run in two different ways:
+	1. Edit the partially written docker-compose.yml file to run postgres and expose the postgres port. 
+		1a. Take one of your existing Java programs that utilizes a database and configure it to use the dockerized postgres
+	2. Edit the partially written docker-compose-full.yml file, postgres (do not expose ports to your machine) is already in the file
+		2a. Take one of your existing Java programs that utilizes a database and complete the Dockerfile to create an image for it
+		2b. Edit the docker-compose-full.yml file to run this custom image in your network and utilize the postgres from your docker for your Java application
+https://spring.io/guides/topicals/spring-boot-docker/ - Tutorial for creating Dockerfiles for Spring Boot applications
+To run a docker-compose file $ docker-compose -f <docker_compose_file> up -d
+
+Tips: The easiest way to do this is to build your java application into a jar.
+./mvnw clean install will build a jar in the target directory of your application, copy that jar over to the diretory of your container lab.
+
+The video also has a full lab walk-through
+
+If you get odd errors on building your jar, you might need to intialize the maven-wrapper by running the following:
+$ mvn wrapper:wrapper
+$ mvn clean install
+$ ./mvnw clean install
