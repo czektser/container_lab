@@ -1,4 +1,4 @@
-Lab Repo: 
+Lab Repo: https://github.com/czektser/container_lab
 Take the provided docker-compose files and we will manipulate these to run in two different ways:
 	1. Edit the partially written docker-compose.yml file to run postgres and expose the postgres port. 
 		1a. Take one of your existing Java programs that utilizes a database and configure it to use the dockerized postgres
